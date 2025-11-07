@@ -129,9 +129,13 @@ export function AnaglyphSpheresAscii({
       resizeObserver.disconnect();
       renderer.setAnimationLoop(null);
       // Cleanup
-      spheres.forEach((m) => scene.remove(m));
+      spheres.forEach((m) => {
+        scene.remove(m);
+      });
       geometry.dispose();
-      materials.forEach((m) => m.dispose());
+      materials.forEach((m) => {
+        m.dispose();
+      });
       renderer.dispose();
       container.removeChild(effect.domElement);
     };

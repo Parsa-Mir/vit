@@ -1,25 +1,18 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "bunVersion": "1.x",
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist",
-  "installCommand": "bun install",
-  "framework": null,
-  "devCommand": "bun run dev",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"buildCommand": "bun run build",
+	"outputDirectory": "dist",
+	"installCommand": "bun install",
+	"framework": null,
+	"devCommand": "bun run dev",
+	"rewrites": [
+		{
+			"source": "/api/:path*",
+			"destination": "/api"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "/index.html"
+		}
+	]
 }
-
