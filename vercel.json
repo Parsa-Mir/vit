@@ -4,19 +4,6 @@
   "installCommand": "bun install",
   "framework": null,
   "devCommand": "bun run dev",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "functions": {
     "api/index.ts": {
       "runtime": "bun@1.0.0"
@@ -26,6 +13,10 @@
     {
       "source": "/api/:path*",
       "destination": "/api"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

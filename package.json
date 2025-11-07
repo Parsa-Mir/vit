@@ -8,7 +8,10 @@
     "routes:gen": "bunx @tanstack/router-cli generate",
     "routes:watch": "bunx @tanstack/router-cli watch",
     "start": "NODE_ENV=production bun src/index.tsx",
-    "build": "bun run build.ts"
+    "build": "bun run build.ts",
+    "vercel:dev": "vercel dev",
+    "vercel:build": "bun run build && vercel build",
+    "vercel:preview": "bun run build && vercel dev"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.7",
